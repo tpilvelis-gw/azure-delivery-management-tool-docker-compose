@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  azure-delivery-management-tool-backend:
+    build:
+      context: "../azure-delivery-management-tool-backend"
+      dockerfile: "Dockerfile"
+    ports:
+      - 8000:8000
+    expose:
+      - 8000
+
+  azure-delivery-management-tool-ui:
+    build:
+      context: "../azure-delivery-management-tool-ui"
+      dockerfile: "Dockerfile"
+    ports:
+      - 3000:3000
+    expose:
+      - 3000
